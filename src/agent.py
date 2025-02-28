@@ -1,7 +1,7 @@
-from huggingface_hub import login
-from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel
+from smolagents import CodeAgent, tool, DuckDuckGoSearchTool, HfApiModel
+from login import login_huggingface
 
-login()
+login_huggingface()
 
 agent = CodeAgent(
     tools=[DuckDuckGoSearchTool()],
